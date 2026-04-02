@@ -14,7 +14,7 @@ def add_patient():
         "age": age,
         "disease": disease
     }
-    print("✅ Patient added successfully!")
+    print("Patient added successfully!")
 
 def view_patients():
     if not patients:
@@ -33,15 +33,15 @@ def search_patient():
         p = patients[pid]
         print(f"Name: {p['name']}, Age: {p['age']}, Disease: {p['disease']}")
     else:
-        print("❌ Patient not found.")
+        print("Patient not found.")
 
 def delete_patient():
     pid = input("Enter Patient ID to delete: ")
     if pid in patients:
         del patients[pid]
-        print("🗑️ Patient deleted.")
+        print("Patient deleted.")
     else:
-        print("❌ Patient not found.")
+        print("Patient not found.")
 
 def update_patient():
     pid = input("Enter Patient ID to update: ")
@@ -55,14 +55,14 @@ def update_patient():
             "age": age,
             "disease": disease
         }
-        print("✏️ Patient updated.")
+        print("Patient updated.")
     else:
-        print("❌ Patient not found.")
+        print("Patient not found.")
 
 def add_appointment():
     pid = input("Enter Patient ID: ")
     if pid not in patients:
-        print("❌ Patient not found.")
+        print("Patient not found.")
         return
 
     date = input("Enter Appointment Date: ")
@@ -72,7 +72,7 @@ def add_appointment():
         "date": date,
         "doctor": doctor
     }
-    print("📅 Appointment added.")
+    print("Appointment added.")
 
 def view_appointments():
     if not appointments:
@@ -87,7 +87,7 @@ def view_appointments():
 def generate_bill():
     pid = input("Enter Patient ID: ")
     if pid not in patients:
-        print("❌ Patient not found.")
+        print("Patient not found.")
         return
 
     print("\n--- BILL ---")
